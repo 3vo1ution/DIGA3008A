@@ -13,3 +13,8 @@ p {
     font-size: 20px;
     list-style-type: square;
 }
+
+.navlinks {
+    list-style-type: none;
+    background-color: black;
+}
