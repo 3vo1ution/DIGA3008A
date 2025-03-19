@@ -1,3 +1,15 @@
 h1 {
-    color: #630330;
+    color: #f10bc3;
+    font-size: 36px;
+}
+
+p {
+    color: #0b26f1;
+    font-size: 18px;
+}
+
+.SquareBulletPointList {
+    color: #f10bc3;
+    font-size: 20px;
+    list-style-type: square;
 }
