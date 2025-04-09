@@ -14,11 +14,6 @@ p {
     list-style-type: square;
 }
 
-.navlinks {
-    list-style-type: none;
-    background-color: black;
-}
-
 .navlinks a {
     color: white;
     background-color: #363636;
