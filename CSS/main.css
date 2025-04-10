@@ -44,6 +44,16 @@ nav {
     transition: 0.5s; /* Smooth transition for the hover effect */
 }
 
+.CurrentPage {
+    color: #000000;
+    background-color: #ffd700; 
+    font-size: 16px;
+    font-weight: bold;
+    border: #ffd700 1px solid;
+    border-radius: 10px; 
+    padding: 3px 6px;
+}
+
 h1 {
     color: #ffd700;
     text-align: center;
