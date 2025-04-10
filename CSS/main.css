@@ -1,12 +1,10 @@
 header {
-    background-color: #333;
     color: #ffd700;
     padding: 20px;
     text-align: center;
 }
 
 nav {
-    background-color: #333;
     color: #ffd700;
     position: fixed; /* Keeps the navigation bar at the top of the page even when i scroll */
     top: 0;
@@ -22,6 +20,28 @@ nav {
     display: flex;
     justify-content: space-evenly;
 
+}
+
+.NavLinks li {
+    font-weight: bold; 
+}
+
+.NavLinks a {
+    color: #ffd700;
+    background-color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: #ffd700 3px solid;
+    border-radius: 10px; 
+    padding: 3px 6px;
+    text-decoration: none; /* Remove underline from links */
+}
+.NavLinks a:hover {
+    background-color: #ffd700; 
+    color: #000000; 
+    text-shadow: 0 0 15px #fc8704;
+    box-shadow: 0 0 20px #fc8704; /* Add a glow effect on hover */
+    transition: 0.5s; /* Smooth transition for the hover effect */
 }
 
 h1 {
