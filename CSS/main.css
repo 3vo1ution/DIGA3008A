@@ -1,15 +1,18 @@
 header {
     color: #ffd700;
+    background-color: black;
     padding: 20px;
     text-align: center;
 }
 
 nav {
     color: #ffd700;
+    background-color: black;
     position: fixed; /* Keeps the navigation bar at the top of the page even when i scroll */
     top: 0;
+    left: 0;
     width: 100%;
-   /* z-index: 1000;  Makes the navigation bar above other content */
+    /* z-index: 1000;  Makes the navigation bar above other content */
     padding: 4px;
     text-align: center;
 }
@@ -18,8 +21,10 @@ nav {
     list-style-type: none;
     background-color: black;
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: space-evenly; 
+    width: 100%;
+    align-items: center;
+    padding: 0px;
 }
 
 .NavLinks li {
@@ -53,13 +58,10 @@ nav {
     border-radius: 10px; 
     padding: 3px 6px;
 }
-
-h1 {
-    color: #ffd700;
-    text-align: center;
-    font-size: 2.5em;
-    margin-top: 20px;
-}
+/*.NavLinks a:visited {
+    color: #ffd700; Change the color of visited links 
+    text-decoration: none;  Remove underline from visited links
+} */
 
 body { 
     background-color: black;
@@ -68,4 +70,35 @@ body {
     
 }
 
+h1 {
+    color: #ffd700;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    padding: 20px;
+    text-shadow: 0 0 15px #fc8704;
+}
+h2 {
+    color: #ffd700;
+    text-align: center;
+    margin-top: 20px;
+}
+h3 {
+    color: #ffd700;
+    text-align: center;
+    margin-top: 20px;
+}
 
+p {
+    color: #ffd700;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1200px;
+
+}
+
+ul {
+    text-align: center;
+    margin: 20px 0;
+}
