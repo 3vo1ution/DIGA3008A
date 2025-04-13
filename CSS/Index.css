@@ -22,3 +22,16 @@ p {
     border: #f10bc3 3px solid;
     border-radius: 10px; 
 }
+
+.alias {
+    color: #ffae00;
+    text-shadow: 0 0 100px #fc8704;
+    font-weight: bold;
+    font-size: 1.0em;
+  }
+
+  .highlight {
+    color: #ffae00;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ffd700;
+  }

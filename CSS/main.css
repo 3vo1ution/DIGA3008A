@@ -73,8 +73,9 @@ body {
 h1 {
     color: #ffd700;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 5.5em;
     margin-top: 20px;
+    margin-bottom: 5px; 
     padding: 20px;
     text-shadow: 0 0 15px #fc8704;
 }
@@ -86,7 +87,9 @@ h2 {
 h3 {
     color: #ffd700;
     text-align: center;
-    margin-top: 20px;
+    margin: 5px auto;
+    margin-top: 0px;
+    max-width: 700px;
 }
 
 p {
@@ -102,3 +105,5 @@ ul {
     text-align: center;
     margin: 20px 0;
 }
+
+
