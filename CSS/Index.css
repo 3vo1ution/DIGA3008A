@@ -1,11 +1,22 @@
 h1 {
-    color: #f10bc3;
-    font-size: 36px;
+    color: #ffd700;
+    text-align: center;
+    font-weight: 700;
+    font-size: 5.5em;
+    margin-top: 200px;
+    margin-bottom: 5px; 
+    padding: 20px;
+    text-shadow: 0 0 30px #fc8704;
 }
 
-p {
-    color: #0b26f1;
-    font-size: 18px;
+h3 {
+    color: #ffd700;
+    text-align: center;
+    margin: 5px auto;
+    margin-top: 100px;
+    max-width: 700px;
+    font-weight: 400;
+
 }
 
 .SquareBulletPointList {
@@ -35,3 +46,14 @@ p {
     font-weight: bold;
     text-shadow: 0 0 10px #ffd700;
   }
+
+  .Pathways {
+    margin-top: 250px;
+  }
+
+  .ElevatorPitch {
+    font-weight: 400;
+    text-shadow: 0 0 10px #ffd700;
+    font-style: italic;
+
+}
