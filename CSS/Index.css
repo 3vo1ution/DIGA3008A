@@ -19,6 +19,14 @@ h3 {
 
 }
 
+p {
+    color: #ffd700;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1200px;
+}   
+
 .SquareBulletPointList {
     color: #f10bc3;
     font-size: 20px;
@@ -56,4 +64,15 @@ h3 {
     text-shadow: 0 0 10px #ffd700;
     font-style: italic;
 
+}
+
+img {
+
+    box-shadow: 0 0 30px #04b3b3;
+
+}
+img:hover{
+    background-color: rgba(255, 215, 0, 0.3);
+    transition: 0.8s;
+    border-radius: 2px; 
 }
