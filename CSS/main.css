@@ -57,10 +57,14 @@ nav {
     border-radius: 10px; 
     padding: 3px 6px;
 }
-/*.NavLinks a:visited {
-    color: #ffd700; Change the color of visited links 
-    text-decoration: none;  Remove underline from visited links
-} */
+.NavLinks a:visited {
+    color: #ffd700; 
+    text-decoration: none; 
+}
+
+a {
+    color: #ffd700; 
+}
 
 
 .comfortaa-BodyText {

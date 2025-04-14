@@ -4,3 +4,19 @@
     justify-content: center;
     gap: 20px; /* space between images */
 }
+
+img {
+    max-width: 1080px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    border: #ffd700 1px solid;
+    box-shadow: 0 0 30px #fc8704;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.PhotoGrid li {
+    list-style: none; /* remove default list style */
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */
+}
