@@ -57,10 +57,7 @@ nav {
     border-radius: 10px; 
     padding: 3px 6px;
 }
-.NavLinks a:visited {
-    color: #ffd700; 
-    text-decoration: none; 
-}
+
 
 a {
     color: #ffd700; 
