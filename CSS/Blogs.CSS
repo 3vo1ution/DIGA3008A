@@ -1,0 +1,33 @@
+.BlogList li {
+    color: #ffd700;
+    background-color: transparent;  
+    font-size: 16px;
+    font-weight: bold;
+    border: #ffd700 1px solid;
+    border-radius: 10px; 
+    padding: 3px 6px;
+    text-decoration: none; /* Remove underline from links */
+}
+.BlogList a {
+    color: #ffd700;
+    text-decoration: none; /* Remove underline from links */
+}
+.BlogList li:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    border: #ffd90000 1px solid;
+    color: #000000; 
+    text-shadow: 0 0 15px #fc8704;
+    box-shadow: 0 0 20px #fc8704; /* Add a glow effect on hover */
+    transition: 0.5s; /* Smooth transition for the hover effect */
+}
+
+.BlogHeading {
+    color: #ffffff;
+    text-shadow: 0 0 30px #fc8704;
+}
+
+.ReadMore {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline from links */
+}
