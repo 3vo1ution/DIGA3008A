@@ -3,22 +3,24 @@
     background-color: transparent;  
     font-size: 16px;
     font-weight: bold;
-    border: #ffd700 1px solid;
+    border: #ffd90023 1px solid;
     border-radius: 10px; 
     padding: 3px 6px;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none; 
+    list-style-type: none;
+    padding-left: 0;
 }
 .BlogList a {
     color: #ffd700;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none; 
 }
 .BlogList li:hover {
     background-color: rgba(255, 215, 0, 0.3);
-    border: #ffd90000 1px solid;
+    border: #ffd9000d 1px solid;
     color: #000000; 
     text-shadow: 0 0 15px #fc8704;
-    box-shadow: 0 0 20px #fc8704; /* Add a glow effect on hover */
-    transition: 0.5s; /* Smooth transition for the hover effect */
+    box-shadow: 0 0 20px #fc8704;
+    transition: 0.8s;
 }
 
 .BlogHeading {
@@ -30,4 +32,10 @@
     color: #ffffff;
     font-weight: bold;
     text-decoration: none; /* Remove underline from links */
+}
+
+.ReferenceMaterial li {
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none; 
 }
