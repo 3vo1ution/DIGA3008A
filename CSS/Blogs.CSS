@@ -1,3 +1,15 @@
+.BlogList {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers the list items */
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 75%;
+}
+
+
 .BlogList li {
     color: #ffd700;
     background-color: transparent;  
@@ -9,6 +21,7 @@
     text-decoration: none; 
     list-style-type: none;
     padding-left: 0;
+
 }
 .BlogList a {
     color: #ffd700;
@@ -39,3 +52,4 @@
     font-weight: bold;
     text-decoration: none; 
 }
+
