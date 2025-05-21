@@ -152,7 +152,9 @@ img:hover{
 }
 
 #Evo {
-
+  max-width: auto;
+  width: auto;
+  height: auto;
   filter : drop-shadow(0 0 10px #04b3b3);
   transition: 0.8s;
   border: none;
