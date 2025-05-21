@@ -1,3 +1,4 @@
+
 h1 {
     color: #ffd700;
     text-align: center;
@@ -42,6 +43,40 @@ p {
     border-radius: 10px; 
 }
 
+.CarouselContainer {
+    width: 90vw;                 /* 90% of the viewport's width */    
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;        /* Prepares for arrows if needed */
+    overflow: hidden;
+    border: 2px solid gold;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #fc8704;
+    background-color: rgba(0, 0, 0, 0.6); 
+    max-width: 80rem;            /* Hard limit for very large screens */
+
+}
+
+.Carousel {
+    display: flex;             
+    gap: 2vw;                    /* Space between items */
+    transition: transform 0.5s ease;  /* Smooth movement for sliding*/
+  }
+
+  .CarouselItem {
+    height: auto;
+    max-height: 60vh;          
+    width: auto;
+    max-width: 90%;             
+    object-fit: contain;         /* Keeps images aspect ratio normal */
+    flex-shrink: 0;              /* Prevents image from shrinking when space is tight */
+  
+    box-shadow: 0 0 1rem #fc8704;   
+    border: 0.1rem solid #ffd700;   
+    border-radius: 1rem;              /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.2); 
+  }
+
 .alias {
     color: #ffae00;
     text-shadow: 0 0 100px #fc8704;
@@ -65,6 +100,41 @@ p {
     font-style: italic;
 
 }
+
+.FooterContainer {
+    background-color: #1111118f; 
+    color: #ffd700;
+    padding: 2vh 5vw;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 5vh;
+  }
+  
+  .FooterContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  
+  .SocialLink {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+  
+  .SocialLink a {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .SocialLink a:hover {
+    color: #fc8704;
+    text-shadow: 0 0 5px #fc8704
+  }
+  
 
 #Profile {
     margin-top: 100px;

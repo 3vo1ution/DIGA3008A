@@ -10,12 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Maitree:wght@200;300;400;500;600;700&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/Index.css"> 
     <link rel="stylesheet" href="CSS/main.css">
+    <script src="Main.js"></script>
     <script src="Index.js"></script> <!-- This is the JavaScript file for the index page -->
 </head>
 <body class="BodyText">
        <header>
        <nav class="NavBar" aria-label="Main Navigation Bar">
        <!--<button class="menu-toggle" aria-label="Toggle navigation">-->
+        
+        <div class="MenuToggle" id="MenuToggle">
+            <button class="MenuToggleButton" id="ToggleButton"> </button>
+                <span class="Bar"></span>
+                <span class="Bar"></span>
+                <span class="Bar"></span>
+              </div>
+
         <ul class="NavLinks">
             <li class="CurrentPage">Home</li>
             <li><a class="u-url" href="../DIGA3008A/Blogs/BlogPages.html">Blogs</a></li>
@@ -33,11 +42,29 @@
 
     <h1 class="h-card">EVO</h1> 
 
-    <h3 class = "ElavatorPitch"> Yo, Im Tlhalefo Boshielo but everyone calls me <span class="alias">EVO</span> <br>I’m a Digital Arts student at Wits University, a multidisciplinary artist and founder of <span class="highlight">EVOLA</span>.<br>
+    <h3 class = "ElavatorPitch"> Yo, Im Tlhalefo Boshielo but everyone calls me <span class="alias">EVO</span> <br>
+        I’m a Digital Arts student at Wits University, a multidisciplinary artist and founder of <span class="highlight">EVOLA</span>.<br>
          This portfolio is my tomb: each project a relic, each page a ritual. Welcome to a space where design, memory, and myth converge.
     
         </h3> 
      </section>
+
+    <section class="CarouselSection">
+        
+        <div class="CarouselContainer">
+            <div class="Carousel" id="Gallery">
+              <img src="../DIGA3008A/Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkEatThePoor.jpeg" alt="Protest Artwork Depicing a ghoulish rendition of ANC March witha sihllouted Cyril Ramaphosa
+              Poster with the word Eat the Poor wtitten on the poster in a sctratched out manner" class="CarouselItemActive" />
+              <img src="../DIGA3008A/Portfolio/PortfolioImages/Photography/CCShootRaquelle2.JPG" alt="A Girl in a chrochetted Pink and white top highlighted by the sun holding flowers in her hand" class="CarouselItem" />
+              <img src="../DIGA3008A/Portfolio/PortfolioImages/GraphicsDesign/GraphicDesignAndSoItBegins.jpg" alt="A Graphics design image of a black and white photo of girl whos eyes are scratched outin white
+              with the words AND SO IT BEGINS overlayed around/in front of her" class="CarouselItem" />
+            </div>
+            <div class="Controls">
+              <button id="Previous">&laquo;</button>
+              <button id="Next">&raquo;</button>
+            </div>
+          </div>
+    </section>
 
 
     <section class="Pathways">
@@ -71,4 +98,18 @@
              </section>
     
 </body>
+
+<footer class="FooterContainer">
+    <div class="FooterContent">
+      <p class="FooterText">
+        &copy; 2025 Tlhalefo Boshielo (EVO) · All rights reserved.
+        This site and its contents are part of a creative portfolio. Unauthorized reproduction or distribution is prohibited.
+      </p>
+      <div class="SocialMediaIcons">
+        <a href="https://www.instagram.com/ev0.jpeg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="  class="SocialLink"> My Instagram</a>
+
+    </div>
+  </footer>
+
+  
 </html>

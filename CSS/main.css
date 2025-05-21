@@ -7,7 +7,7 @@ header {
 
 nav {
     color: #ffd700;
-    background-color: rgba(0, 0, 0, 0.45); /* black with control over the opacity */   
+    background-color: rgba(0, 0, 0, 0.707); /* black with control over the opacity */   
     position: fixed; /* Keeps the navigation bar at the top of the page even when i scroll */
     top: 0;
     left: 0;
@@ -17,9 +17,47 @@ nav {
     text-align: center;
 }
 
+.NavLinks.show {
+    display: flex;
+  }
+
+
+/* Hamburger icon styles */
+.MenuToggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;             
+    z-index: 1000; 
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .MenuToggleButton {
+    background: #fc8704;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+  }
+  
+  .Bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ffd700; 
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+
 .NavLinks {
     list-style-type: none;
-    display: flex;
+    display: none;
     justify-content: space-evenly; 
     width: 100%;
     align-items: center;
@@ -113,20 +151,19 @@ h4 {
     text-align: center;
     margin: 5px auto;
     margin-top: 40px;
-    max-width: 700px;
+    max-width: 700px; /*FIXXXXXX EVO*/
 }
 
 p {
     color: #ffd700;
-    text-align: justify;
+    text-align: left; /* I wanted to use JUSTIFY but i was advised against it so this comment is a reminder to change it when my marks arent at stake lol*/
     margin: 0 auto;
     padding: 15px;
-    max-width: 1200px;
-
+    max-width: 75%;
 }
 
 img {
-    max-width: 500px;
+    max-width: auto;
     height: 500px;
     display: block;
     margin: 0 auto;
@@ -156,5 +193,64 @@ ul {
     margin: 20px 0;
 }
 
+/* Phone Compatability */
+@media (max-width: 768px) {    /* This is a media query, a CSS condition that makes content appear differently when the parameters (within the brackets) of the condition are met*/
+   
+    h1 {
+        font-size: 2.5em;
+        margin-top: 100px;
+    }
+
+    p {
+        max-width: 90%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    img {
+        width: auto;         
+        max-width: auto;     
+        height: auto;        
+    }
+
+    body {
+        background-attachment: scroll; /* makes the BG scroll with everything else*/
+    }
+
+    .MenuToggle {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2000;
+      }
+
+      .NavLinks {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+        border: 1px solid #ffd70020;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px #fc8704;
+      }  
+      
+      .NavLinks li {
+        margin: 10px 0; }
+
+     .NavLinks.show {
+        display: flex !important;}
+
+ }
+
+/* Tablet Compatability */
+
+@media (max-width: 1024px) {
+
+
+ }
 
 
