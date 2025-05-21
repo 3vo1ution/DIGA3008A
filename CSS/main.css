@@ -245,13 +245,13 @@ ul {
         display: flex !important;}
 
   #Evo {
-  max-width: 70%;
-  width: 70%;
-  height: 70%;
-  filter : drop-shadow(0 0 10px #04b3b3);
-  transition: 0.8s;
-  border: none;
-  box-shadow: none;
+    width: 90vw;
+    height: auto;
+    max-height: 60vh;
+    filter: drop-shadow(0 0 10px #04b3b3);
+    transition: 0.8s;
+    border: none;
+    box-shadow: none;
 }
 
  }
