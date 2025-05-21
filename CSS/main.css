@@ -245,9 +245,9 @@ ul {
         display: flex !important;}
 
   #Evo {
-  max-width: auto;
-  width: auto;
-  height: auto;
+  max-width: 70%;
+  width: 70%;
+  height: 70%;
   filter : drop-shadow(0 0 10px #04b3b3);
   transition: 0.8s;
   border: none;
