@@ -43,28 +43,35 @@ p {
     border-radius: 10px; 
 }
 
+
+.Logo {
+    margin: 0 auto;
+    height: 10vh;
+    width: 11vw;
+    margin-top: 28vh; /* 20% of the viewport height */
+    display: block;
+    filter: drop-shadow(0 0 10px #04b3b3);
+    transition: 0.8s;
+    border: none;
+    box-shadow: none;
+
+}
+.Logo:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    transition: 0.8s;
+    border-radius: 2px; 
+}
+
 .CarouselWrapper {
   position: relative;
   width: 90%;   
   overflow: hidden;
-  max-width: 1200; /* Match your carousel width */
+  max-width: 1200; /* Match  carousel width */
   margin: 0 auto;
+  margin-top: 30vh; 
   padding: 0 ; 
 }
 
- /*.CarouselContainer {
-    width: 90vw;                 90% of the viewport's width   
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;         Prepares for arrows if needed 
-    overflow: hidden;
-    border: 0.5px solid gold;
-    border-radius: 12px;
-    box-shadow: 0 0 20px #fc8704;
-    background-color: rgba(0, 0, 0, 0.6); 
-    max-width: 80rem;            /* Hard limit for very large screens
-
-} */
 
 .Carousel {
     display: flex;   
@@ -144,7 +151,7 @@ body:fullscreen {
   top: 50%;
   transform: translateY(-50%);
   background: 0; 
-  border: 2px solid #d4af37; /* Gold relic border */
+  border: 2px solid #d4af37; 
   color: #d4af37; /* Gold text */
   font-size: 1.5rem;
   padding: 10px 20px;

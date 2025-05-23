@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (toggleButton && navLinks) {
     toggleButton.addEventListener("click", function() {
       navLinks.classList.toggle("show");
+      navLinks.classList.toggle('Active');
     });
   }
 
