@@ -8,3 +8,12 @@ img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.PdfButton {
+    max-width: 20vw;
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+    border: #ffd700 1px solid;
+    box-shadow: 0 0 30px #fc8704;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
