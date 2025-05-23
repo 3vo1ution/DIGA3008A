@@ -103,7 +103,6 @@ a {
     color: #ffd700; 
 }
 
-
 .comfortaa-BodyText {
     font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
@@ -245,7 +244,8 @@ ul {
         display: flex !important;}
 
   #Evo {
-    width: 90vw;
+    width: auto;
+    max-width: 40vh;
     height: auto;
     max-height: 60vh;
     filter: drop-shadow(0 0 10px #04b3b3);

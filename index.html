@@ -15,14 +15,10 @@
 </head>
 <body class="BodyText">
        <header>
-       <nav class="NavBar" aria-label="Main Navigation Bar">
-       <!--<button class="menu-toggle" aria-label="Toggle navigation">-->
+       <nav class="NavBar">
         
         <div class="MenuToggle" id="MenuToggle">
             <button class="MenuToggleButton" id="ToggleButton"> </button>
-                <span class="Bar"></span>
-                <span class="Bar"></span>
-                <span class="Bar"></span>
               </div>
 
         <ul class="NavLinks">
@@ -51,19 +47,34 @@
 
     <section class="CarouselSection">
         
-        <div class="CarouselContainer">
-            <div class="Carousel" id="Gallery">
+        <section class="CarouselWrapper">
+            
+          <button  class="CarouselButton" id="Previous" >&laquo;</button>
+
+             <section class="Carousel" id="Gallery">
+
+               <figure class="CarouselItem">
               <img src="../DIGA3008A/Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkEatThePoor.jpeg" alt="Protest Artwork Depicing a ghoulish rendition of ANC March witha sihllouted Cyril Ramaphosa
-              Poster with the word Eat the Poor wtitten on the poster in a sctratched out manner" class="CarouselItemActive" />
-              <img src="../DIGA3008A/Portfolio/PortfolioImages/Photography/CCShootRaquelle2.JPG" alt="A Girl in a chrochetted Pink and white top highlighted by the sun holding flowers in her hand" class="CarouselItem" />
+              Poster with the word Eat the Poor wtitten on the poster in a sctratched out manner">
+               </figure>
+
+              <figure class="CarouselItemActive">
+               <img src="../DIGA3008A/Portfolio/PortfolioImages/Photography/CCShootRaquelle2.JPG" alt="A Girl in a chrochetted Pink and white top highlighted by the sun holding flowers in her hand">
+               </figure>
+
+               <figure class="CarouselItem">
               <img src="../DIGA3008A/Portfolio/PortfolioImages/GraphicsDesign/GraphicDesignAndSoItBegins.jpg" alt="A Graphics design image of a black and white photo of girl whos eyes are scratched outin white
-              with the words AND SO IT BEGINS overlayed around/in front of her" class="CarouselItem" />
-            </div>
-            <div class="Controls">
-              <button id="Previous">&laquo;</button>
-              <button id="Next">&raquo;</button>
-            </div>
-          </div>
+              with the words AND SO IT BEGINS overlayed around/in front of her">
+              </figure>
+
+             </section>
+
+              <button class="CarouselButton" id="Next"  >&raquo;</button>
+
+               <p class="SwipeHint"> Touch and slide to uncover artifacts</p>
+        </section>
+          
+
     </section>
 
 

@@ -7,52 +7,46 @@ const nextButton = document.getElementById("Next");
 
 let currentSlide = 0; 
 
-function moveSlide () {
-    const slideWidth = slides[0].getBoundingClientRect().width; // gets the width of the image
-    carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`; // moves the image to the left by the width of the image
+
+function moveSlide() {
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+  
+  // Remove active class from all slides
+  slides.forEach(slide => {
+    slide.classList.remove('CarouselItemActive');
+    slide.style.filter = 'sepia(60%) hue-rotate(5deg)'; // Aged artifact effect
+    slide.style.transition = 'transform 0.7s cubic-bezier(0.52, 0.13, 0.15, 1.1), filter 0.5s';
+  });
+  
+  // Add active class to current slide
+  slides[currentSlide].classList.add('CarouselItemActive');
+  slides[currentSlide].style.filter = 'none'; // Clear filter for active slide
+  slides[currentSlide].style.boxShadow = '0 0 20px #d4af37'; // Gold relic glow
 }
 
-nextButton.addEventListener("click", () => {
-    if  (currentSlide < slides.length - 1) {
+
+function goNext() {
+      if  (currentSlide < slides.length - 1) {
         currentSlide++;
         moveSlide();
     }
-});
-
-prevButton.addEventListener("click", () => {
-    if (currentSlide > 0) {
+  }
+function goPrev() {
+      if (currentSlide > 0) {
       currentSlide--;
       moveSlide();
     }
-  });
+  }
 
-  // Fullscreen functionality
-  const images = document.querySelectorAll(".CarouselItem");
-  const activeImage = document.querySelector(".CarouselItemActive");
 
-  images.forEach((image) => {
-      image.addEventListener("click", () => {
-          if (image.requestFullscreen) {
-              image.requestFullscreen(); // ForStandardBrowser
-          } else if (image.webkitRequestFullscreen) {
-              image.webkitRequestFullscreen(); // ForSafari
+nextButton.addEventListener("click", () => {
+  goNext();
 
-          } else if (image.msRequestFullscreen) {
-              image.msRequestFullscreen(); // For MicrosoftEdge
-          } 
-      });
+});
 
-    });
+prevButton.addEventListener("click", () => {
+  goPrev();
 
-    // Fullscreen functionality for the active image
-    activeImage.addEventListener("click", () => {
-        if (activeImage.requestFullscreen) {
-          activeImage.requestFullscreen();
-        } else if (activeImage.webkitRequestFullscreen) {
-          activeImage.webkitRequestFullscreen();
-        } else if (activeImage.msRequestFullscreen) {
-          activeImage.msRequestFullscreen();
-        }
-      });
-
+  }); 
 });

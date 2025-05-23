@@ -43,25 +43,56 @@ p {
     border-radius: 10px; 
 }
 
-.CarouselContainer {
-    width: 90vw;                 /* 90% of the viewport's width */    
+.CarouselWrapper {
+  position: relative;
+  width: 90%;   
+  overflow: hidden;
+  max-width: 1200; /* Match your carousel width */
+  margin: 0 auto;
+  padding: 0 ; 
+}
+
+ /*.CarouselContainer {
+    width: 90vw;                 90% of the viewport's width   
     max-width: 800px;
     margin: 0 auto;
-    position: relative;        /* Prepares for arrows if needed */
+    position: relative;         Prepares for arrows if needed 
     overflow: hidden;
-    border: 2px solid gold;
+    border: 0.5px solid gold;
     border-radius: 12px;
     box-shadow: 0 0 20px #fc8704;
     background-color: rgba(0, 0, 0, 0.6); 
-    max-width: 80rem;            /* Hard limit for very large screens */
+    max-width: 80rem;            /* Hard limit for very large screens
 
-}
+} */
 
 .Carousel {
-    display: flex;             
+    display: flex;   
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+   -webkit-overflow-scrolling: touch; /* scrolling for them darn iphones */
+    padding: 0;     
+    scroll-behavior: smooth;     
     gap: 2vw;                    /* Space between items */
     transition: transform 0.5s ease;  /* Smooth movement for sliding*/
+
+     &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
+  
+  /* Firefox */
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* Edge */
+  }
+
+.Carousel figure {
+  min-width: auto;
+  margin: 0;
+  transition: transform 0.7s cubic-bezier(0.52, 0.13, 0.15, 1.1);
+}
+
 
   .CarouselItem {
     height: auto;
@@ -70,12 +101,117 @@ p {
     max-width: 90%;             
     object-fit: contain;         /* Keeps images aspect ratio normal */
     flex-shrink: 0;              /* Prevents image from shrinking when space is tight */
-  
+    transition: transform 0.7s cubic-bezier(0.52, 0.13, 0.15, 1.1), filter 0.5s;
     box-shadow: 0 0 1rem #fc8704;   
-    border: 0.1rem solid #ffd700;   
+    border: 0px solid #ffd700;   
     border-radius: 1rem;              /* Rounded corners */
     background-color: rgba(0, 0, 0, 0.2); 
   }
+
+.CarouselItemActive {
+  box-shadow: 0 0 20px #d4af37 !important; /* Override for active state */
+}
+
+.CarouselItemActive:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: contain;
+  background-color: black;
+}
+
+.CarouselItem:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: none;
+  background-color: black;
+}
+
+html:fullscreen,
+body:fullscreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.CarouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: 0; 
+  border: 2px solid #d4af37; /* Gold relic border */
+  color: #d4af37; /* Gold text */
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 30%; /* Circular buttons */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); /* Subtle glow */
+  transition: all 0.3s ease;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-family: 'Taviraj', serif; 
+}
+
+
+
+.CarouselButton:hover {
+  background: rgba(0, 0); 
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); /* Stronger glow */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+.CarouselButton:active {
+  transform: translateY(1px); /* Slight press down */
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); /* Dimmed glow */
+}
+
+.CarouselButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  border-color: #555; /* Dimmed gold */
+}
+
+/* Left button */
+#Previous {
+  left: -25px; /* Half outside container */
+}
+
+/* Right button */
+#Next {
+  right: -25px; /* Half outside container */
+}
+
+/* Hover effects */
+.CarouselButton:hover {
+  background: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+}
+
+.fullscreen-exit {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
 
 .alias {
     color: #ffae00;
@@ -152,11 +288,99 @@ img:hover{
 }
 
 #Evo {
-  max-width: auto;
+  max-width: 40vw;
   width: auto;
   height: auto;
+  max-height:  70vh;
   filter : drop-shadow(0 0 10px #04b3b3);
   transition: 0.8s;
   border: none;
   box-shadow: none;
+}
+
+.SwipeHint {
+  display: none;
+  text-align: center;
+  color: #d4af37;
+  font-family: 'Taviraj', serif;
+  padding: 1rem;
+  font-style: normal;
+  position: relative;
+}
+
+.SwipeHint::before,
+.SwipeHint::after {
+  content: "𓂀";
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+@media (max-width: 768px) {
+  .SwipeHint {
+    display: block;
+  }
+  .CarouselButton {
+    display: none;
+  }
+  
+    .Carousel {
+    overflow: hidden;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  
+  .Carousel figure {
+    width: 60vw;
+    flex: 0 0 92%; /* Slightly wider than viewport */
+    margin: 0 4%; /* Creates natural inset */
+    scroll-snap-align: center;
+
+  }
+
+    .CarouselItem {
+    max-height: 30vh;
+    max-width: 80vw; /* Adjusted for mobile */
+    box-shadow: 0 0 0.8rem #fc8704; 
+    border-radius: 0.8rem; 
+  }
+
+  /* Active item emphasis */
+  .CarouselItemActive {
+    max-height: 35vh; /* Slightly larger */
+    max-width: 80vw;
+    box-shadow: 0 0 1.5rem #d4af37 !important;
+  }
+}
+  /* Animate sand on swipe */
+  .Carousel.swiping-right::before {
+    background: radial-gradient(circle at left, 
+      transparent 0%, 
+      rgba(212, 175, 55, 0.3) 50%, 
+      transparent 100%);
+    animation: sand-right 0.7s forwards;
+  }
+  
+  .Carousel.swiping-left::before {
+    background: radial-gradient(circle at right, 
+      transparent 0%, 
+      rgba(212, 175, 55, 0.3) 50%, 
+      transparent 100%);
+    animation: sand-left 0.7s forwards;
+  }
+
+
+@keyframes sand-right {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes sand-left {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(-100%); opacity: 0; }
 }
