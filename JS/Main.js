@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fullscreen functionality for all images
   const allImages = document.querySelectorAll('img');
   
-  // Create exit button (styled to match your theme)
+  // Create exit button 
   const exitButton = document.createElement('button');
   exitButton.innerHTML = '&times;';
   exitButton.className = 'fullscreen-exit';

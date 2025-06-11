@@ -1,0 +1,146 @@
+
+.WrittenWorksContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 8vh;
+}
+
+.PageTitle {
+    color: #D4AF37;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 20px #FC8704;
+}
+
+.WrittenWorksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.WorkCategory {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid #d4af3720;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.WorkLink {
+    display: block;
+    text-decoration: none;
+    color: #FFD700;
+    height: 100%;
+}
+
+.WorkTitle {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #FC8704;
+}
+
+.WorkDescription {
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.HieroglyphLink {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.WorkCategory:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(252, 135, 4, 0.3);
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid #D4AF37;
+
+}
+
+.WorkCategory:hover .HieroglyphLink {
+    transform: scale(1.2);
+}
+
+.SectionTitle {
+    color: #D4AF37;
+    text-align: center;
+    font-size: 2rem;
+    margin: 3rem 0 2rem;
+    text-shadow: 0 0 15px #FC8704;
+}
+
+.BlogList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.BlogItem {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.BlogPostLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.BlogTitle {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 8px #FC8704;
+}
+
+.BlogExcerpt {
+    color: #FFD700;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.ReadMore {
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.BlogItem:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: #D4AF37;
+    box-shadow: 0 0 20px rgba(252, 135, 4, 0.3);
+    transform: translateY(-3px);
+}
+
+.BlogItem:hover .ReadMore {
+    transform: translateX(5px);
+}
+
+/*Responsiveness */
+@media (max-width: 768px) {
+    .WrittenWorksGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .PageTitle {
+        font-size: 2rem;
+    }
+    
+    .WorkTitle {
+        font-size: 1.5rem;
+    }
+}
