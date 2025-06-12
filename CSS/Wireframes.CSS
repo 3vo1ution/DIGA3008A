@@ -1,10 +1,6 @@
 img {
-    max-width: 1080px;
-    height: 500px;
-    display: block;
-    margin: 0 auto;
-    border: #ffd700 1px solid;
-    box-shadow: 0 0 30px #fc8704;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: #ffd90010 0px solid;
+    object-fit:fill;
+    transition: transform 0.3s ease;
 }
 

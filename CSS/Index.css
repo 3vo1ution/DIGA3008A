@@ -1,12 +1,11 @@
-
 h1 {
     color: #ffd700;
     text-align: center;
     font-weight: 700;
     font-size: 5.5em;
-    margin-top: 200px;
-    margin-bottom: 5px; 
-    padding: 20px;
+    margin-top: 20vh;
+    margin-bottom: 0.5em;
+    padding: 2em;
     text-shadow: 0 0 30px #fc8704;
 }
 
@@ -14,62 +13,60 @@ h3 {
     color: #ffd700;
     text-align: center;
     margin: 5px auto;
-    margin-top: 100px;
+    margin-top: 10vh;
     max-width: 700px;
     font-weight: 400;
-
 }
 
 p {
     color: #ffd700;
     text-align: justify;
     margin: 0 auto;
-    padding: 15px;
+    padding: 1em;
     max-width: 1200px;
-}   
+}
 
 .SquareBulletPointList {
     color: #f10bc3;
-    font-size: 20px;
+    font-size: 1.25rem;
     list-style-type: square;
 }
 
 .navlinks a {
     color: white;
     background-color: #363636;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
-    border: #f10bc3 3px solid;
-    border-radius: 10px; 
+    border: #f10bc3 0.2em solid;
+    border-radius: 0.625em;
 }
-
 
 .Logo {
     margin: 0 auto;
     height: 10vh;
     width: 11vw;
-    margin-top: 28vh; /* 20% of the viewport height */
+    margin-top: 28vh;
     display: block;
     filter: drop-shadow(0 0 10px #04b3b3);
     transition: 0.8s;
     border: none;
     box-shadow: none;
-
 }
+
 .Logo:hover {
     background-color: rgba(255, 215, 0, 0.3);
     transition: 0.8s;
-    border-radius: 2px; 
+    border-radius: 2px;
 }
 
 .CarouselWrapper {
-  position: relative;
-  width: 90%;   
-  overflow: hidden;
-  max-width: 1200; /* Match  carousel width */
-  margin: 0 auto;
-  margin-top: 30vh; 
-  padding: 0 ; 
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20vh;
+    padding: 0;
 }
 
 
@@ -87,11 +84,12 @@ p {
     display: none;
     width: 0;
     height: 0;
-  }
+  
   
   /* Firefox */
   scrollbar-width: none;
   -ms-overflow-style: none; /* Edge */
+}
   }
 
 .Carousel figure {
@@ -111,7 +109,7 @@ p {
     transition: transform 0.7s cubic-bezier(0.52, 0.13, 0.15, 1.1), filter 0.5s;
     box-shadow: 0 0 1rem #fc8704;   
     border: 0px solid #ffd700;   
-    border-radius: 1rem;              /* Rounded corners */
+    border-radius: 1rem;            
     background-color: rgba(0, 0, 0, 0.2); 
   }
 
@@ -154,10 +152,10 @@ body:fullscreen {
   border: 2px solid #d4af37; 
   color: #d4af37; /* Gold text */
   font-size: 1.5rem;
-  padding: 10px 20px;
-  margin: 0 10px;
+  padding: 0.625em 1.25em;
+  margin: 0 0.625em;
   cursor: pointer;
-  border-radius: 30%; /* Circular buttons */
+  border-radius: 38%; /* Circular buttons */
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); /* Subtle glow */
   transition: all 0.3s ease;
   z-index: 10;
@@ -170,7 +168,7 @@ body:fullscreen {
 .CarouselButton:hover {
   background: rgba(0, 0); 
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); /* Stronger glow */
-  transform: translateY(-2px); /* Slight lift */
+  transform: translateY(-0.5px); /* Slight lift */
 }
 
 .CarouselButton:active {
@@ -187,15 +185,14 @@ body:fullscreen {
 
 /* Left button */
 #Previous {
-  left: -25px; /* Half outside container */
+  left: -30px; /* Half outside container */
 }
 
 /* Right button */
 #Next {
-  right: -25px; /* Half outside container */
+  right: -30px; /* Half outside container */
 }
 
-/* Hover effects */
 .CarouselButton:hover {
   background: rgba(212, 175, 55, 0.2);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);

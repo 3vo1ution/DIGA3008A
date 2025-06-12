@@ -1,0 +1,105 @@
+h1.p-name {
+    font-family: 'Taviraj', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: #D4AF37;
+    text-shadow: 0 0 1.5rem #FC8704;
+    letter-spacing: 0.1rem;
+}
+
+body.h-entry > ul {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem;
+    list-style: none;
+}
+
+.EssayPost {
+    display: block;
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #FFD700;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.EssayPost:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: #D4AF37;
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(252, 135, 4, 0.3);
+}
+
+.BlogHeading {
+    font-family: 'Taviraj', serif;
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 0.5rem #FC8704;
+    border-bottom: 1px solid #D4AF37;
+    padding-bottom: 0.5rem;
+}
+
+ /*.EssayPost {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+Read More Link */
+.ReadMore {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: 'Taviraj', serif;
+    transition: all 0.3s ease;
+}
+
+.EssayPost:hover .ReadMore {
+    color: #FC8704;
+    transform: translateX(0.5rem);
+}
+
+.CurrentPage {
+    background-color: #D4AF37;
+    color: #000000 !important;
+    border-radius: 0.55rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h1.p-name {
+        font-size: 2.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .EssayPost {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .BlogHeading {
+        font-size: 1.5rem;
+    }
+    
+    body.h-entry > ul {
+        padding: 1rem;
+    }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+    h1.p-name {
+        font-size: 3rem;
+    }
+    
+    .EssayPost {
+        padding: 1.75rem;
+    }
+}

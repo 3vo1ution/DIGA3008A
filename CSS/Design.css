@@ -1,11 +1,12 @@
 img {
-    max-width: 500px;
-    height: 750px;
+    max-width: min(100%, 40rem); 
+    height: auto; 
+    border: 0.0625rem solid #D4AF37; /* 1px gold border */
+    box-shadow: 0 0 1.875rem rgba(252, 135, 4, 0.6); 
+    background-color: rgba(0, 0, 0, 0.2); 
     display: block;
-    margin: 0 auto;
-    border: #ffd700 1px solid;
-    box-shadow: 0 0 30px #fc8704;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 2rem auto; 
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .PdfButton {
@@ -16,4 +17,40 @@ img {
     border: #ffd700 1px solid;
     box-shadow: 0 0 30px #fc8704;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+img {
+    max-width: min(90vw, 31.25rem); /* 500px = 31.25rem (500/16) */
+    height: auto; /* Let height scale proportionally */
+    /*aspect-ratio: 2/3; */
+    display: block;
+    margin: 1.5rem auto; /* 24px */
+    border: 0.0625rem solid #D4AF37; /* 1px = 0.0625rem */
+    box-shadow: 0 0 1.875rem #FC8704; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.PdfButton {
+    width: min(90%, 20rem); /* Fallback for browsers without min() */
+    max-width: 20rem; 
+    padding: 0.75rem 1.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;
+    border: 0.0625rem solid #D4AF37;
+    box-shadow: 0 0 1.875rem rgba(252, 135, 4, 0.7); 
+    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Responsiveness */
+@media (max-width: 48rem) { /* 768px */
+    img {
+        max-width: 85vw;
+        box-shadow: 0 0 1.25rem #FC8704; /* 20px */
+    }
+    
+    .PdfButton {
+        width: 90%;
+        max-width: none;
+    }
 }
