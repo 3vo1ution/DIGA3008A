@@ -186,6 +186,18 @@ digitalArtItems.forEach(item => {
             });
         }
 
+          // Fullscreen Keyboard Navigation
+    let currentFullscreenIndex = 0;
+    let fullscreenImages = [];
+    let fullscreenContainer = null;
+
+    // Modify your fullscreen opening logic (assuming you have one)
+    function openFullscreen(imageElement) {
+        fullscreenImages = Array.from(document.querySelectorAll('.PhotoGridItem img'));
+        currentFullscreenIndex = fullscreenImages.indexOf(imageElement);
+    }
+    
+
         if (fullscreenButton && animation) {
             fullscreenButton.addEventListener('click', () => {
                 if (animation.requestFullscreen) {

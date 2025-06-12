@@ -1,10 +1,22 @@
 img {
  
-object-fit: fit-content; /* Ensures images fit within their container without distortion */
+object-fit: fit-content; /* Ensures images fit within its container without distortion */
+}
+
+video {
+    max-width: auto;
+    height: 500px;
+    object-fit: contain; /* Keeps images aspect ratio normal */
+    flex-shrink: 0; /* Prevents image from shrinking when space is tight */
+    display: block;
+    margin: 0 auto;
+    border: #ffd700 1px solid;
+    box-shadow: 0 0 30px #fc8704;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
-/* Recent Projects Carousel */
+/* Recent Projects Carousel  */
 .RecentProjects {
     margin: 2rem auto;
     max-width: 90%;
@@ -20,23 +32,32 @@ object-fit: fit-content; /* Ensures images fit within their container without di
 .RecentWorksTrack {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 1.5rem;
-    padding: 1rem 0;
+    gap: 0; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .RecentWorksSlide {
     flex: 0 0 auto;
-    width: 80%;
+    width: auto;
     transition: all 0.3s ease;
-    border-radius: 1rem;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: 0 0 1rem #fc8704;
+    margin: 0; /* LOOK HERE BRO */
+    padding: 0; 
+}
+
+/* Remove right margin from last slide to prevent artificial spacing */
+.RecentWorksSlide:last-child {
+    margin-right: 0;
 }
 
 .RecentWorksSlideActive {
     box-shadow: 0 0 1.25rem #d4af37;
     transform: scale(1.05);
 }
+
 
 /* Digital Art Interactive Gallery */
 .DigitalArtGallery {
@@ -109,6 +130,7 @@ object-fit: fit-content; /* Ensures images fit within their container without di
     width: 95vw;
     max-width: 100%;
     box-sizing: border-box;
+    padding: 2rem;
 }
 
 .PhotoGridContainer {

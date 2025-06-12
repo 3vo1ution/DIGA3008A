@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/Design.css">
     <script src="../JS/Main.js"></script>
-    <script src="../JS/Design.js"></script>
+    <script src="../JS/Design.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script> <!-- API -->
 
 </head>
 
@@ -46,10 +47,16 @@
 
     </ul>
 
-    <a href="../Portfolio/PortfolioImages/PDFs/2023CreativePortfolio.pdf" class="PdfButton" target="_blank" rel="noopener noreferrer">
-    ViewAncientArtifacts
-    <span class=>𓃭𓍯𓏤</span>
-</a>
+    <div class="PdfViewerContainer">
+       
+        <div class="PdfToolbar">
+            <button id="PdfPrevPage">← Previous</button>
+            <span id="PdfPageNum">1</span> / <span id="PdfPageCount">0</span>
+            <button id="PdfNextPage">Next →</button>
+        </div>
+
+         <canvas id="PdfCanvas"></canvas>
+    </div>
     
        <h3> My Goal</h3>
 <p class= “ParagraphContainer” >My Primary goal for my Website is to Showcase my <b>Work</b> and design processes (specifically in the case of the website, however it does give further insight into my creative process at large). My aim is for this site to be a place to display my academic, creative, and design work in a visually engaging and cohesive manner that aligns with me as an artist and how I'd like my work to be portrayed in a digital space . <br>

@@ -42,6 +42,48 @@ img {
     transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
+/* PDF Viewer Styles */
+.PdfViewerContainer {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 2px solid #D4AF37;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.PdfToolbar {
+    background-color: #1a1a1a;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PdfToolbar button {
+    background: rgba(212, 175, 55, 0.2);
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Maitree', serif;
+    transition: all 0.3s ease;
+}
+
+.PdfToolbar button:hover {
+    background: rgba(212, 175, 55, 0.4);
+}
+
+#PdfCanvas {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #2a2a2a;
+}
+
+
 /* Responsiveness */
 @media (max-width: 48rem) { /* 768px */
     img {

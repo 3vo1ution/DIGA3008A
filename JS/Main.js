@@ -1,89 +1,91 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
-    const toggleButton = document.getElementById("ToggleButton");
-    const navLinks = document.querySelector(".NavLinks");
+  // Toggle button functionality (unchanged)
+  const toggleButton = document.getElementById("ToggleButton");
+  const navLinks = document.querySelector(".NavLinks");
   
-      if (toggleButton && navLinks) {
+  if (toggleButton && navLinks) {
     toggleButton.addEventListener("click", function() {
       navLinks.classList.toggle("show");
       navLinks.classList.toggle('Active');
     });
   }
 
-
-  // Fullscreen functionality for all images
+  // Fullscreen functionality
   const allImages = document.querySelectorAll('img');
-  
-  // Create exit button 
-  const exitButton = document.createElement('button');
-  exitButton.innerHTML = '&times;';
-  exitButton.className = 'fullscreen-exit';
-  exitButton.setAttribute('aria-label', 'Exit fullscreen');
-  exitButton.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    background: rgba(0,0,0,0.7);
-    color: #d4af37;
-    border: 2px solid #d4af37;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-    transition: all 0.3s ease;
-  `;
-  document.body.appendChild(exitButton);
+  let currentFullscreenIndex = 0;
+  let fullscreenImages = [];
 
-  // Fullscreen toggle function
-  function toggleFullscreen(imgElement) {
-    if (!document.fullscreenElement) {
-      // Enter fullscreen
-      imgElement.style.cssText = `
-        max-width: 100% !important;
-        max-height: 100% !important;
-        width: auto !important;
-        height: auto !important;
-        object-fit: contain !important;
-        background: rgba(0,0,0,0.9) !important;
-      `;
-      
-      if (imgElement.requestFullscreen) {
-        imgElement.requestFullscreen();
-      } else if (imgElement.webkitRequestFullscreen) {
-        imgElement.webkitRequestFullscreen();
-      } else if (imgElement.msRequestFullscreen) {
-        imgElement.msRequestFullscreen();
-      }
-      
-      exitButton.style.display = 'block';
-      
-      // Add golden glow effect
-      imgElement.style.boxShadow = '0 0 40px #d4af37';
-    } else {
-      // Exit fullscreen
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
-    }
-  }
+  // Create controls
+  const exitButton = createControlButton('×', 'fullscreen-exit', 'Exit fullscreen');
+  const prevButton = createControlButton('←', 'fullscreen-prev', 'Previous image');
+  const nextButton = createControlButton('→', 'fullscreen-next', 'Next image');
 
-  // Click handler for all images
+  // Add event listeners
+  exitButton.addEventListener('click', exitFullscreen);
+  prevButton.addEventListener('click', () => navigateFullscreen(-1));
+  nextButton.addEventListener('click', () => navigateFullscreen(1));
+
+  // Image click handler
   allImages.forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', function() {
-      toggleFullscreen(this);
+      enterFullscreen(this);
     });
   });
 
-  // Exit button handler
-  exitButton.addEventListener('click', function() {
+  // Keyboard support
+  document.addEventListener('keydown', function(e) {
+    if (document.fullscreenElement) {
+      switch(e.key) {
+        case 'Escape':
+          exitFullscreen();
+          break;
+        case 'ArrowLeft':
+        case 'a':
+        case 'A':
+          navigateFullscreen(-1);
+          e.preventDefault();
+          break;
+        case 'ArrowRight':
+        case 'd':
+        case 'D':
+          navigateFullscreen(1);
+          e.preventDefault();
+          break;
+      }
+    }
+  });
+
+  // Helper function to create control buttons
+  function createControlButton(html, className, ariaLabel) {
+    const button = document.createElement('button');
+    button.innerHTML = html;
+    button.className = className;
+    button.setAttribute('aria-label', ariaLabel);
+    document.body.appendChild(button);
+    return button;
+  }
+
+  // Enter fullscreen
+  function enterFullscreen(imgElement) {
+    fullscreenImages = Array.from(allImages).filter(img => img.src);
+    currentFullscreenIndex = fullscreenImages.indexOf(imgElement);
+    
+    imgElement.classList.add('fullscreen-image');
+    
+    if (imgElement.requestFullscreen) {
+      imgElement.requestFullscreen();
+    } else if (imgElement.webkitRequestFullscreen) {
+      imgElement.webkitRequestFullscreen();
+    } else if (imgElement.msRequestFullscreen) {
+      imgElement.msRequestFullscreen();
+    }
+    
+    showControls();
+  }
+
+  // Exit fullscreen
+  function exitFullscreen() {
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) {
@@ -91,25 +93,51 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
     }
-  });
+  }
 
-  // Handle fullscreen change to reset styles
+  // Navigate between images
+  function navigateFullscreen(direction) {
+    if (!document.fullscreenElement) return;
+    
+    currentFullscreenIndex += direction;
+    
+    // Loop around if at ends
+    if (currentFullscreenIndex < 0) {
+      currentFullscreenIndex = fullscreenImages.length - 1;
+    } else if (currentFullscreenIndex >= fullscreenImages.length) {
+      currentFullscreenIndex = 0;
+    }
+    
+    // Exit current fullscreen
+    exitFullscreen();
+    
+    // Small delay to allow exit to complete
+    setTimeout(() => {
+      enterFullscreen(fullscreenImages[currentFullscreenIndex]);
+    }, 100);
+  }
+
+  // Show/hide controls
+  function showControls() {
+    [exitButton, prevButton, nextButton].forEach(btn => {
+      btn.style.display = 'block';
+    });
+  }
+
+  function hideControls() {
+    [exitButton, prevButton, nextButton].forEach(btn => {
+      btn.style.display = 'none';
+    });
+  }
+
+  // Handle fullscreen change
   document.addEventListener('fullscreenchange', function() {
     if (!document.fullscreenElement) {
       allImages.forEach(img => {
-        img.style.cssText = ''; // Reset all inline styles
-        img.style.cursor = 'zoom-in'; // Maintain zoom cursor
+        img.classList.remove('fullscreen-image');
+        img.style.cursor = 'zoom-in';
       });
-      exitButton.style.display = 'none';
+      hideControls();
     }
   });
-
-  // Keyboard support
-  document.addEventListener('keydown', function(e) {
-    if (document.fullscreenElement) {
-      if (e.key === 'Escape') {
-        if (document.exitFullscreen) document.exitFullscreen();
-      }
-    }
-  });
-}); 
+});
