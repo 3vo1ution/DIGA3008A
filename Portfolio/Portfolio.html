@@ -10,8 +10,8 @@
     <title>3voPortfolio</title>
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/Portfolio.css">
-    <script src="../JS/Main.js"></script>
-    <script src="../JS/Portfolio.js"></script>
+    <script src="../JS/Main.js" defer></script>
+    <script src="../JS/Portfolio.js" defer></script>
 </head>
 
 <body>
@@ -37,78 +37,106 @@
 
       <h1>Portfolio</h1> 
 
-        <h2>Most Recent Project</h2> 
-        <p> My most recent Project "Winx by Evo"  is a mixed media expression of photography and Digital art, expressing my take of a popular kids TV show</p>
-        <ul class="PhotoGrid">
-            <li><img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxJustinaGreenSkinFullBody.jpeg" alt="A preodiminantly green and pink photograpgh of a girl holding on to a pole with a pair of pink and green floral wings digitally drawn on to her, heavily inspired by Flora from Winx Club"></li>
-            <li><img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxIngaStella.jpeg" alt="An Image of a girl in a pink and yellow outfit with stars and wings (that also appear starry) digitally  drawn and edited onto the model, inspired by Stella from Winx Club"></li>
-            <li><img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxNavyMirrorShot.jpeg" alt="A preodiminantly blue image of a girl looking in the mirror, as if she were checking herself with a pair of green techno wings digitally drawn onto the image, inspired by Techna from Winx Club"></li>
-            <li><img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxOwamMirrorShot.jpeg" alt="A preodiminantly red image of a girl with glasses looking in the mirror, as if she were checking herself with a pair of red Butterfly wings digitally drawn onto the image, inspired by Musa from Winx Club"></li>
-        </ul>
-
-        <h2>Digital Art</h2>
-        <p>Most of my digital artworks are a blend of photography, graphic design and Digital Drawing/Painting in a distinct style</p>
-            <section class="CarouselSection">
-        
-
-    <section class="CarouselSection">
-        
-        <section class="CarouselWrapper">
+        <!-- Recent Projects Section - Now a proper carousel -->
+        <section class="RecentProjects">
+            <h2>Most Recent Project</h2> 
+            <p>My most recent Project "Winx by Evo" is a mixed media expression of photography and Digital art, expressing my take of a popular kids TV show</p>
             
-          <button  class="CarouselButton" id="Previous" >&laquo;</button>
-
-             <section class="Carousel" id="Gallery">
-
-               <figure class="CarouselItem">
-              <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkEatThePoor.jpeg" alt="Protest Artwork Depicing a ghoulish rendition of ANC March witha sihllouted Cyril Ramaphosa
-              Poster with the word Eat the Poor wtitten on the poster in a sctratched out manner">
-               </figure>
-
-              <figure class="CarouselItemActive">
-               <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkForCongo.JPG" alt="Free Congo Artwork">
-               </figure>
-
-               <figure class="CarouselItem">
-              <img src="../Portfolio/PortfolioImages/GraphicsDesign/GraphicDesignAndSoItBegins.jpg" alt="A Graphics design image of a black and white photo of girl whos eyes are scratched outin white
-              with the words AND SO IT BEGINS overlayed around/in front of her">
-              </figure>
-
-             </section>
-
-              <button class="CarouselButton" id="Next"  >&raquo;</button>
-
-               <p class="SwipeHint"> Touch and slide to uncover artifacts</p>
+            <div class="RecentWorksCarousel">
+                <button class="CarouselButton CarouselButtonPrev">&laquo;</button>
+                
+                <div class="RecentWorksTrack">
+                    <div class="RecentWorksSlide RecentWorksSlideActive">
+                        <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxJustinaGreenSkinFullBody.jpeg" alt="A predominantly green and pink photograph of a girl holding on to a pole with a pair of pink and green floral wings digitally drawn on to her, heavily inspired by Flora from Winx Club">
+                    </div>
+                    <div class="RecentWorksSlide">
+                        <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxIngaStella.jpeg" alt="An Image of a girl in a pink and yellow outfit with stars and wings (that also appear starry) digitally drawn and edited onto the model, inspired by Stella from Winx Club">
+                    </div>
+                    <div class="RecentWorksSlide">
+                        <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxNavyMirrorShot.jpeg" alt="A predominantly blue image of a girl looking in the mirror, as if she were checking herself with a pair of green techno wings digitally drawn onto the image, inspired by Techna from Winx Club">
+                    </div>
+                    <div class="RecentWorksSlide">
+                        <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkWinxOwamMirrorShot.jpeg" alt="A predominantly red image of a girl with glasses looking in the mirror, as if she were checking herself with a pair of red Butterfly wings digitally drawn onto the image, inspired by Musa from Winx Club">
+                    </div>
+                </div>
+                
+                <button class="CarouselButton CarouselButtonNext">&raquo;</button>
+            </div>
+            <p class="SwipeHint">Swipe or use arrows to view more</p>
         </section>
 
-
-        <h2>Photography</h2>
-
-                <section class="CarouselWrapper">
+        <!-- Digital Art Section - Interactive Gallery -->
+        <section class="DigitalArtGallery">
+            <h2>Digital Art</h2>
+            <p>Most of my digital artworks are a blend of photography, graphic design and Digital Drawing/Painting in a distinct style</p>
             
-          <button  class="CarouselButton" id="Previous" >&laquo;</button>
-
-             <section class="Carousel" id="Gallery">
-
-               <figure class="CarouselItem">
-            <img src="../Portfolio/PortfolioImages/Photography/WinxShootIngaPreTransformation.JPG" alt="An Image of a girl in a pink and yellow outfit inspired by Stella from Winx Club"></li>
-              Poster with the word Eat the Poor wtitten on the poster in a sctratched out manner">
-               </figure>
-
-              <figure class="CarouselItemActive">
-               <img src="../Portfolio/PortfolioImages/Photography/CCShootRaquelle2.JPG" alt="A Girl in a chrochetted Pink and white top highlighted by the sun holding flowers in her hand">
-               </figure>
-
-               <figure class="CarouselItem">
-              <img src="../Portfolio/PortfolioImages/Photography/TheMatrix.jpeg" alt=" The matrix shopping block at wits">
-              </figure>
-
-             </section>
-
-              <button class="CarouselButton" id="Next"  >&raquo;</button>
-
-               <p class="SwipeHint"> Touch and slide to uncover artifacts</p>
+            <div class="DigitalArtGrid">
+                <figure class="DigitalArtItem">
+                    <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkEatThePoor.jpeg" alt="Protest Artwork Depicting a ghoulish rendition of ANC March with a silhouetted Cyril Ramaphosa Poster with the word Eat the Poor written on the poster in a scratched out manner">
+                    <figcaption class="DigitalArtCaption">Eat The Poor</figcaption>
+                </figure>
+                <figure class="DigitalArtItem">
+                    <img src="../Portfolio/PortfolioImages/DigitalArtworks/DigitalArtworkForCongo.JPG" alt="Free Congo Artwork">
+                    <figcaption class="DigitalArtCaption">Free Congo</figcaption>
+                </figure>
+                <figure class="DigitalArtItem">
+                    <img src="../Portfolio/PortfolioImages/GraphicsDesign/GraphicDesignAndSoItBegins.jpg" alt="A Graphics design image of a black and white photo of girl whose eyes are scratched out in white with the words AND SO IT BEGINS overlayed around/in front of her">
+                    <figcaption class="DigitalArtCaption">And So It Begins</figcaption>
+                </figure>
+                <!-- Add more digital art items as needed -->
+            </div>
         </section>
 
+        <!-- Photography Section - PhotoGrid Layout -->
+<section class="PhotographyGallery">
+    <h2>Photography</h2>
+    <p>Captured moments through my lens</p>
+    
+    <div class="PhotoGridContainer">
+        <div class="PhotoGridItem">
+            <img src="../Portfolio/PortfolioImages/Photography/WinxShootIngaPreTransformation.JPG" alt="An Image of a girl in a pink and yellow outfit inspired by Stella from Winx Club">
+        </div>
+        <div class="PhotoGridItem">
+            <img src="../Portfolio/PortfolioImages/Photography/CCShootRaquelle2.JPG" alt="A Girl in a crocheted Pink and white top highlighted by the sun holding flowers in her hand">
+        </div>
+        <div class="PhotoGridItem">
+            <img src="../Portfolio/PortfolioImages/Photography/TheMatrix.jpeg" alt="The matrix shopping block at wits">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+</section>
+
+        <!-- Animations Section - Special Display -->
+        <section class="AnimationsShowcase">
+            <h2>Animations</h2>
+            <p>My animated works come to life</p>
+            
+            <div class="AnimationContainer">
+                <div class="AnimationItem">
+                    <!-- Placeholder for animation - you'll add actual GIFs or video elements here -->
+                    <img src="../Portfolio/PortfolioImages/Animations/YourAnimation1.gif" alt="Description of first animation">
+                    <div class="AnimationControls">
+                        <button class="AnimationPlayButton">Play</button>
+                        <button class="AnimationFullscreenButton">Fullscreen</button>
+                    </div>
+                </div>
+                <!-- Add more animation items as needed -->
+            </div>
+        </section>
+        
+        <footer class="FooterContainer">
+            <div class="FooterContent">
+                <p class="FooterText">
+                    &copy; 2025 Tlhalefo Boshielo (EVO) · All rights reserved.
+                    This site and its contents are part of a creative portfolio. Unauthorized reproduction or distribution is prohibited.
+                </p>
+                <div class="SocialMediaIcons">
+                    <a href="https://www.instagram.com/ev0.jpeg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="SocialLink">
+                        <img id="IGIcon" src="../Images/InstagramLogo.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </footer>
 
 </body>
 </html>

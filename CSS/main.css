@@ -219,6 +219,43 @@ ul {
     margin: 1.25rem 0;
 }
 
+
+
+.FooterContainer {
+    background-color: rgba(0, 0, 0, 0.391);
+    color: #ffd700;
+    text-align: center;
+    border-top: 1px solid #ffd700;
+    padding: 0.25rem;
+    margin-top: 8vh;
+}
+
+/* Footer logo sizing */
+#IGIcon {
+  width: 2.5rem;       
+  height: 2.5rem;     
+  max-width: 10vw;    
+  max-height: 10vh;   
+  transition: transform 0.3s ease;
+  border: none;
+  filter: drop-shadow(0 0 10px #04b3b3);
+  box-shadow: none; 
+  padding-top: 0;
+}
+
+
+#IGIcon:hover {
+  transform: scale(1.1); /* Subtle grow effect */
+    filter: drop-shadow(0 0 15px #04b3b3);
+    box-shadow: none;
+
+}
+
+
+
+
+
+
 /* Phone Compatability */
 @media (max-width: 768px) {    /* This is a media query, a CSS condition that makes content appear differently when the parameters (within the brackets) of the condition are met*/
    
