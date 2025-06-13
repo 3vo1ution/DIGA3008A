@@ -5,6 +5,67 @@ header {
     text-align: center;
 }
 
+/* Fullscreen image styles */
+.fullscreen-image {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: contain !important;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999 !important;
+  cursor: zoom-out !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Fullscreen control buttons */
+.fullscreen-exit,
+.fullscreen-prev,
+.fullscreen-next {
+  position: fixed;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.fullscreen-exit:hover,
+.fullscreen-prev:hover,
+.fullscreen-next:hover {
+  background: #ffd700;
+  color: black;
+  transform: scale(1.1);
+}
+
+.fullscreen-exit {
+  top: 20px;
+  right: 20px;
+}
+
+.fullscreen-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fullscreen-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 nav {
     color: #ffd700;
     background-color: rgba(0, 0, 0, 0.707);    
