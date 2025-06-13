@@ -7,7 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
       blogNav.classList.toggle("Active");
 
      
-      document.body.classList.toggle("NoScroll");
+      // Toggle body scroll lock and navbar scrolling
+      if (blogNav.classList.contains("Active")) {
+        document.body.style.overflow = "hidden";
+        blogNav.style.overflowY = "auto";
+      } else {
+        document.body.style.overflow = "";
+        blogNav.style.overflowY = "";
+      }
     });
   }
 });
