@@ -11,12 +11,16 @@
   padding: 2rem;
   margin-top: 8vh;
   overflow-y: hidden; /* Start with scrolling disabled */
+  padding-bottom: 2rem; 
+  margin-bottom: 3rem;
 }
 
 .BlogNav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-bottom: 2rem; 
+  margin-bottom: 6rem;
 }
 
 .BlogNav li {
