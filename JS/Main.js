@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentFullscreenIndex = 0;
   let fullscreenImages = [];
 
+  // Create controls
+  const exitButton = createControlButton('×', 'fullscreen-exit', 'Exit fullscreen');
+  const prevButton = createControlButton('←', 'fullscreen-prev', 'Previous image');
+  const nextButton = createControlButton('→', 'fullscreen-next', 'Next image');
 
   // Add event listeners
   exitButton.addEventListener('click', exitFullscreen);
