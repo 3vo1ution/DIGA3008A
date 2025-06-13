@@ -9,6 +9,18 @@ h1 {
     text-shadow: 0 0 30px #fc8704;
 }
 
+.PageTitle {
+    font-weight: 500;
+      text-shadow: 0 0 50px #fc8704;
+      translate: 0.5em;
+      transition: all 0.3s ease;
+}
+
+.PageTitle:hover {
+    text-shadow: 0 0 70px #0495fc;
+    transform: translateY(-0.2em);
+}
+
 h3 {
     color: #ffd700;
     text-align: center;
@@ -293,11 +305,10 @@ img:hover{
 }
 
 #Evo {
-  max-width: 40vw;
+  max-width: 25vw;
   width: auto;
   height: auto;
-  max-height:  70vh;
-  filter : drop-shadow(0 0 10px #04b3b3);
+  max-height:  55vh;
   transition: 0.8s;
   border: none;
   box-shadow: none;

@@ -179,6 +179,7 @@ a.DesignLink:hover {
 }
 
 .ContentCard:hover {
+    background: rgba(26, 26, 26, 0);
     transform: translateY(-5px);
     box-shadow: 0 5px 20px #04b3b3;
 }

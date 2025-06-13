@@ -129,3 +129,75 @@
     text-decoration: none; 
 }
 
+/* Writing Navigation */
+.WritingNav {
+    position: fixed;
+    top: 18%;
+    left: 10vw;
+    transform: translateY(-50%);
+    z-index: 100;
+    max-width: 80%;
+    border: 1px solid #D4AF37;
+    border-radius: 0 3rem 3rem 0;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 0 2rem rgba(212, 175, 55, 0.2);
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    
+}
+
+.WritingList {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.WritingLink {
+    color: #7AD0FF;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.WritingLink::before {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.WritingLink:hover {
+    color: #00F0FF;
+    background: rgba(0, 162, 255, 0.1);
+    border-color: #00A2FF;
+    transform: translateX(0.5rem);
+    box-shadow: 0 0 1rem rgba(0, 162, 255, 0.3);
+}
+
+.WritingLink:hover::before {
+    opacity: 1;
+    color: #D4AF37;
+    transform: scale(1.2);
+}
+
+/* Active state */
+.WritingLinkActive {
+    color: #D4AF37;
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.WritingLinkActive::before {
+    content: '𓂀';
+    color: #D4AF37;
+    opacity: 1;
+}
+
+
+

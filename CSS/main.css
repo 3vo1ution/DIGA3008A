@@ -48,9 +48,10 @@ nav {
     flex-direction: column;
     height: 2.5rem;
     width: 2.5rem;
+    transition: all 0.3s ease; 
 }
 
-.MenuToggleButton button :hover {
+.MenuToggleButton:hover {
     background: rgba(0, 0, 0, 0); 
     box-shadow: 0 0 0.9375rem rgba(212, 175, 55, 0.7); /* Stronger glow */
     transform: translateY(-0.125rem); /* Slight lift */
@@ -124,7 +125,7 @@ body {
     color: #ffd700;
     font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
-    background-image: url('../Images/BackgroundImage.JPG'); 
+    background-image: url('../Images/FINALBACKGROUNDV2.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -256,75 +257,268 @@ ul {
 
 
 
-/* Phone Compatability */
-@media (max-width: 768px) {    /* This is a media query, a CSS condition that makes content appear differently when the parameters (within the brackets) of the condition are met*/
-   
+/* Mobile: < 768px (Base styles above) */
+@media (max-width: 767px) {
     h1 {
+        font-size: 3em;
+        margin-top: 15vh;
+        padding: 1em;
+    }
+    
+    .PageTitle {
         font-size: 2.5em;
-        margin-top: 100px;
     }
-
+    
+    h3 {
+        font-size: 1.2em;
+        margin-top: 5vh;
+        padding: 0 1em;
+    }
+    
     p {
-        max-width: 90%;
-        font-size: 14px;
-        padding: 10px;
+        font-size: 0.9em;
+        padding: 0.8em;
+        text-align: left;
     }
-
-    img {
-        width: auto;         
-        max-width: auto;     
-        height: auto;        
+    
+    .Logo {
+        width: 20vw;
+        height: 8vh;
+        min-width: 60px;
+        min-height: 60px;
+        margin-top: 20vh;
     }
-
-    body {
-        background-attachment: scroll; /* makes the BG scroll with everything else*/
+    
+    .CarouselWrapper {
+        width: 95%;
+        margin-top: 10vh;
     }
-
-    .MenuToggle {
-        display: flex;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 2000;
-      }
-
-      .NavLinks {
+    
+    .SwipeHint {
+        display: block;
+    }
+    
+    .CarouselButton {
         display: none;
+    }
+    
+    .Carousel {
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .Carousel figure {
+        width: 80vw;
+        flex: 0 0 80%;
+        margin: 0 2%;
+        scroll-snap-align: center;
+    }
+
+    .CarouselItem {
+        max-height: 40vh;
+        max-width: 75vw;
+        box-shadow: 0 0 0.8rem #fc8704; 
+        border-radius: 0.8rem; 
+    }
+
+    .CarouselItemActive {
+        max-height: 45vh;
+        max-width: 75vw;
+        box-shadow: 0 0 1.5rem #d4af37 !important;
+    }
+    
+    #Evo {
+        max-width: 60vw;
+        max-height: 40vh;
+    }
+    
+    .SkillsList, .ProgrammingLanguages, .Softwares {
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .SkillsList li,
+    .ProgrammingLanguages li, 
+    .Softwares li {
+        padding: 8px 15px;
+        font-size: 0.8em;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .FooterContainer {
+        padding: 3vh 3vw;
+        font-size: 0.8rem;
+    }
+    
+    .SocialLink {
+        gap: 1em;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.85);
-        border: 1px solid #ffd70020;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px #fc8704;
-      }  
-      
-      .NavLinks li {
-        margin: 10px 0; }
-
-     .NavLinks.show {
-        display: flex !important;}
-
-  #Evo {
-    width: auto;
-    max-width: 40vh;
-    height: auto;
-    max-height: 60vh;
-    filter: drop-shadow(0 0 10px #04b3b3);
-    transition: 0.8s;
-    border: none;
-    box-shadow: none;
+    }
+    
+    .SocialLink a {
+        font-size: 0.9rem;
+        padding: 0.8em;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .NavLinks a {
+        font-size: 0.9rem;
+        padding: 0.8em 1.2em;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
- }
+/* Tablet: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 4em;
+        margin-top: 18vh;
+        padding: 1.5em;
+    }
+    
+    .PageTitle {
+        font-size: 3.5em;
+    }
+    
+    h3 {
+        font-size: 1.4em;
+        margin-top: 8vh;
+    }
+    
+    p {
+        font-size: 1em;
+        padding: 0.9em;
+    }
+    
+    .Logo {
+        width: 15vw;
+        height: 9vh;
+        min-width: 80px;
+        min-height: 80px;
+        margin-top: 25vh;
+    }
+    
+    .CarouselWrapper {
+        width: 92%;
+        margin-top: 15vh;
+    }
+    
+    .SwipeHint {
+        display: none;
+    }
+    
+    .CarouselButton {
+        display: flex;
+        font-size: 1.3rem;
+        padding: 0.5em 1em;
+        min-height: 48px;
+        min-width: 48px;
+    }
+    
+    .Carousel {
+        gap: 0.5em;
+    }
+    
+    .Carousel figure {
+        width: calc(50% - 0.25em);
+        flex: 0 0 calc(50% - 0.25em);
+    }
 
-/* Tablet Compatability */
+    .CarouselItem {
+        max-height: 50vh;
+        max-width: 45%;
+    }
 
-@media (max-width: 1024px) {
+    .CarouselItemActive {
+        max-height: 55vh;
+        max-width: 45%;
+    }
+    
+    #Evo {
+        max-width: 35vw;
+        max-height: 50vh;
+    }
+    
+    .SkillsList, .ProgrammingLanguages, .Softwares {
+        gap: 12px;
+    }
+    
+    .SkillsList li,
+    .ProgrammingLanguages li, 
+    .Softwares li {
+        padding: 10px 20px;
+        font-size: 0.9em;
+        min-height: 44px;
+    }
+    
+    .FooterContainer {
+        padding: 2.5vh 4vw;
+        font-size: 0.85rem;
+    }
+    
+    .SocialLink {
+        gap: 1.5em;
+        flex-direction: row;
+    }
+    
+    .SocialLink a {
+        font-size: 0.95rem;
+        padding: 0.7em;
+        min-height: 44px;
+    }
+}
 
 
- }
 
 
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .SwipeHint {
+        display: block;
+    }
+    
+    .CarouselButton {
+        display: none;
+    }
+    
+    .SkillsList li,
+    .ProgrammingLanguages li, 
+    .Softwares li,
+    .SocialLink a,
+    .NavLinks a {
+        min-height: 48px;
+        padding: 12px 20px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .PageTitle:hover,
+    .Logo:hover,
+    img:hover,
+    .CarouselButton:hover,
+    .SkillsList li:hover,
+    .ProgrammingLanguages li:hover,
+    .Softwares li:hover,
+    .SocialLink a:hover {
+        transform: none;
+        box-shadow: inherit;
+        background-color: inherit;
+        text-shadow: inherit;
+        color: inherit;
+    }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: hover) and (pointer: fine) {
+    /* Keep all existing hover effects for mouse users */
+}
