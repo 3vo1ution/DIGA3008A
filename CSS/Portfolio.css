@@ -48,7 +48,7 @@ video {
     padding: 0; 
 }
 
-/* Remove right margin from last slide to prevent artificial spacing */
+/* Remove right margin from last slide to prevent Spacing */
 .RecentWorksSlide:last-child {
     margin-right: 0;
 }

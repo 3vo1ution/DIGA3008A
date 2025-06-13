@@ -1,60 +1,90 @@
-img {
-    max-width: min(100%, 40rem); 
-    height: auto; 
-    border: 0.0625rem solid #D4AF37; /* 1px gold border */
-    box-shadow: 0 0 1.875rem rgba(252, 135, 4, 0.6); 
-    background-color: rgba(0, 0, 0, 0.2); 
-    display: block;
-    margin: 2rem auto; 
-    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
-}
 
-.PdfButton {
-    max-width: 20vw;
-    align-items: center;
-    display: block;
-    margin: 0 auto;
-    border: #ffd700 1px solid;
-    box-shadow: 0 0 30px #fc8704;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 img {
     max-width: min(90vw, 31.25rem); /* 500px = 31.25rem (500/16) */
     height: auto; /* Let height scale proportionally */
     /*aspect-ratio: 2/3; */
     display: block;
     margin: 1.5rem auto; /* 24px */
-    border: 0.0625rem solid #D4AF37; /* 1px = 0.0625rem */
+    border: 0.0625rem solid #ffd700; /* 1px = 0.0625rem */
     box-shadow: 0 0 1.875rem #FC8704; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.PdfButton {
-    width: min(90%, 20rem); /* Fallback for browsers without min() */
-    max-width: 20rem; 
-    padding: 0.75rem 1.5rem; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5rem auto;
-    border: 0.0625rem solid #D4AF37;
-    box-shadow: 0 0 1.875rem rgba(252, 135, 4, 0.7); 
-    transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+a.CMLink,
+a.CMLink:hover {
+    text-decoration: none;
 }
 
-/* PDF Viewer Styles */
+
+.DesignMain {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.PageHeader {
+    text-align: center;
+    position: relative;
+    background: none;
+}
+
+.PageTitle {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.PageSubtitle {
+    color: #7AD0FF;
+    font-style: italic;
+}
+
+/* Design Navigation */
+.DesignNav {
+    margin: 2rem 0;
+    padding-top: 5rem;
+    background: none;
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.DesignList {
+    display: table-cell;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.DesignLink {
+    color: #00C8FF;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #00a2ff54;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+a.DesignLink:hover {
+    background: #00a2ff94;
+    color: #000000;
+    border: 1px solid #00a2ff;
+    box-shadow: 0 0 20px rgb(0, 200, 255);
+    transition: all 0.3s ease;
+}
+
+/* PDF Viewer Section */
+
 .PdfViewerContainer {
     width: 90%;
     max-width: 800px;
     margin: 2rem auto;
-    border: 2px solid #D4AF37;
+    border: 2px solid #ffd700;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .PdfToolbar {
-    background-color: #1a1a1a;
+    background-color: #0000003d;
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -63,36 +93,162 @@ img {
 
 .PdfToolbar button {
     background: rgba(212, 175, 55, 0.2);
-    color: #D4AF37;
-    border: 1px solid #D4AF37;
-    border-radius: 4px;
+    color:#ffd700;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    font-family: 'Maitree', serif;
     transition: all 0.3s ease;
 }
 
 .PdfToolbar button:hover {
-    background: rgba(212, 175, 55, 0.4);
+    background:#ffd700;
+    color: #000000;
+    box-shadow: 0 0 10px #ffd700;
+;
 }
 
 #PdfCanvas {
     width: 100%;
     height: auto;
     display: block;
-    background: #2a2a2a;
+    background: #00000020;
+}
+
+/* PDF Window Specificallt*/
+.PdfViewerSection {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ffd90051;
+    box-shadow: #ffd90051 0 0 2rem;
+    padding: 0.5rem;
+    margin: 0;
+    position: relative;
 }
 
 
-/* Responsiveness */
-@media (max-width: 48rem) { /* 768px */
-    img {
-        max-width: 85vw;
-        box-shadow: 0 0 1.25rem #FC8704; /* 20px */
-    }
-    
-    .PdfButton {
-        width: 90%;
-        max-width: none;
-    }
+.PdfPageIndicator {
+    color: #B6F0FF;
+    font-weight: bold;
 }
+
+
+
+
+/* Design Articles */
+.DesignArticle {
+    background: rgba(25, 25, 25, 0.659);
+    margin: 4rem 0;
+    padding: 2rem;
+    border-left: 3px solid #ffd700;
+    position: relative;
+}
+
+.ArticleTitle {
+    color: #ffd700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.ArticleTitle::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+
+
+/* Content Grid */
+.ContentGrid {
+    display: grid;
+    max-width: 90;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ContentCard {
+    background: rgba(26, 26, 26, 0.8);
+    padding: 1.5rem;
+    border: 1px solid #04b3b3;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.ContentCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px #04b3b3;
+}
+
+.ContentCardTitle {
+    color: #B6F0FF;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #00A2FF;
+    padding-bottom: 0.5rem;
+}
+
+/* User Flow Section */
+.UserFlowSection {
+    margin: 4rem 0;
+}
+
+.FlowDiagram {
+    height: 300px;
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px dashed #00A2FF;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Inspiration Section */
+.ReferenceList {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.ReferenceItem {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.ReferenceItem::before {
+    position: absolute;
+    left: 0;
+    color: #00A2FF;
+}
+
+.ReferenceLink {
+    color: #04b3b3;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ReferenceLink:hover {
+    color: #04f9f9;
+    text-shadow: 0 0 20px #00A2FF;
+}
+
+/* Style Guide Section */
+.StyleGuideFigure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.StyleGuideCaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #7AD0FF;
+}
+
+
+
+
+
+

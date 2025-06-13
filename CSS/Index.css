@@ -77,7 +77,7 @@ p {
    -webkit-overflow-scrolling: touch; /* scrolling for them darn iphones */
     padding: 0;     
     scroll-behavior: smooth;     
-    gap: 2vw;                    /* Space between items */
+    gap: 0.2em;                    /* Space between items */
     transition: transform 0.5s ease;  /* Smooth movement for sliding*/
 
      &::-webkit-scrollbar {
@@ -109,7 +109,8 @@ p {
     transition: transform 0.7s cubic-bezier(0.52, 0.13, 0.15, 1.1), filter 0.5s;
     box-shadow: 0 0 1rem #fc8704;   
     border: 0px solid #ffd700;   
-    border-radius: 1rem;            
+    border-radius: 1rem;  
+    padding: 0;          
     background-color: rgba(0, 0, 0, 0.2); 
   }
 

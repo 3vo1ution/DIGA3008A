@@ -8,157 +8,155 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Maitree:wght@200;300;400;500;600;700&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>3voDesign</title>
-    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/Main.css">
     <link rel="stylesheet" href="../CSS/Design.css">
     <script src="../JS/Main.js"></script>
     <script src="../JS/Design.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script> <!-- API -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 </head>
 
 <body>
+    <header class="Header">
+        <nav class="NavBar" aria-label="Main Navigation">
+            <div class="MenuToggle" id="MenuToggle">
+                <button class="MenuToggleButton" id="ToggleButton">&#9765;</button>
+            </div>
 
-    <header>
-    <nav class="NavBar" aria-label="Main Navigation Bar">
-
-                <div class="MenuToggle" id="MenuToggle">
-            <button class="MenuToggleButton" id="ToggleButton">&#9765;</button>
-              </div>
-
-        <ul class="NavLinks">
-            <li><a class="u-url h-card" href="../index.html">Home</a></li>
-            <li><a class="u-url" href="../Blogs/BlogPages.html">Blogs</a></li>
-            <li><a class="u-url" href="../Essays/Essays.html">Essays</a></li>
-            <li class="CurrentPage">Design</li>
-            <li><a class="u-url" href="../Portfolio/Portfolio.html">Portfolio</a></li>
-            <a class="u-url h-card" href="../index.html#Profile">Profile</a>
-
-        </ul>
-     </nav>  
+            <ul class="NavLinks">
+                <li><a class="NavLink" href="../index.html">Home</a></li>
+                <li><a class="NavLink" href="../Blogs/BlogPages.html">Blogs</a></li>
+                <li><a class="NavLink" href="../Essays/Essays.html">Essays</a></li>
+                <li class="CurrentPage">Design</li>
+                <li><a class="NavLink" href="../Portfolio/Portfolio.html">Portfolio</a></li>
+                <li><a class="NavLink" href="../index.html#Profile">Profile</a></li>
+            </ul>
+        </nav>
     </header>
      
- 
+    <main class="DesignMain">
+        <header class="PageHeader">
+            <h1 class="PageTitle">Design</h1> 
+            <h2 class="PageSubtitle">As in my Process and all that</h2>
+        </header>
 
-    <h1>Design</h1> 
-      <h3>(As in my Process and all that)</h3>
+        <nav class="DesignNav">
+            <ul class="DesignList">
+                <li><a class="DesignLink" href="../DesignFiles/Wireframes.html">Wireframes</a></li>
+            </ul>
+        </nav>
 
-      <ul class = designList>
-        <li><a class="u-url" href="../DesignFiles/Wireframes.html">Wireframes</a></li>
+        <section class="PdfViewerSection">
+            <div class="PdfToolbar">
+                <button id="PdfPrevPage" class="PdfButton">← Previous</button>
+                <span id="PdfPageNum" class="PdfPageIndicator">1</span> / <span id="PdfPageCount" class="PdfPageCount">0</span>
+                <button id="PdfNextPage" class="PdfButton">Next →</button>
+            </div>
+            <canvas id="PdfCanvas" class="PdfCanvas"></canvas>
+        </section>
+        
+        <article class="DesignArticle" id="DesignGoal">
+            <h3 class="ArticleTitle">My Goal</h3>
+            <p class="ParagraphContainer">
+                My Primary goal for my Website is to Showcase my <strong>Work</strong> and design processes (specifically in the case of the website, however it does give further insight into my creative process at large). My aim is for this site to be a place to display my academic, creative, and design work in a visually engaging and cohesive manner that aligns with me as an artist and how I'd like my work to be portrayed in a digital space.
+                </p>
+                <p class="ParagraphContainer">
+                By merging ancient Egyptian motifs with a futuristic sci-fi aesthetic, my goal is to showcase myself as a unique designer whose work stands apart from conventional portfolios in an Indigenous African aesthetic, that mirrors myself as an African Artist.
+                </p>
+                <p class="ParagraphContainer">
+                I want to encourage users to discover my content naturally in an organic and cohesive manner that makes navigating through my site as intuitive as possible, to encourage users to stay on my site and continue to browse through, conveying a sense of exploration through my work.
+                </p>
+                <p class="ParagraphContainer">
+                I want users to feel as though they are exploring an ancient tomb/pyramid filled with mystique and wonder. Whether the user is looking to employ, collaborate, or simply explore my portfolio, the goal for the site is that it enables them to interact meaningfully with my work and easily get in touch.
+               </p>
+        </article>
 
-    </ul>
+        <article class="DesignArticle" id="ContentMapping">
+            <h3 class="ArticleTitle">Content Mapping</h3>
+            <div class="ContentGrid">
+              <a class="CMLink" href="../index.html"> 
+                    <div class="ContentCard">
+                    <h4 class="ContentCardTitle">Homepage</h4>
+                    <p class="ContentCardDescription">A brief Introduction and featured works presented as artifacts awaiting discovery.</p>
+                    </div>
+              </a>
+             <a class="CMLink" href="../WrittenWorks/WrittenWorks.html"> 
+                 <div class="ContentCard">
+                    <h4 class="ContentCardTitle">Scrolls Page</h4>
+                    <p class="ContentCardDescription">This page serves as the "homepage" for all my writing, linking users to my blogs, essays and written portfolio work</p>
+                </div>
+             </a>
+              <a class="CMLink" href="../Blogs/BlogPages.html"> 
+                <div class="ContentCard">
+                    <h4 class="ContentCardTitle">Blogs(Chronicles) Page</h4>
+                    <p class="ContentCardDescription">Weekly blogs and reflections of my web development process.</p>
+                </div>
+                </a>
+                <a class="CMLink" href="../Essays/Essays.html"> 
+                 <div class="ContentCard">
+                    <h4 class="ContentCardTitle">Essays(Royal Decrees) Page</h4>
+                    <p class="ContentCardDescription">A page for my academic/ more formal writing.</p>
+                </div>
+                </a>
+              <a class="CMLink" href="../DesignFiles/Design.html"> 
+                <div class="ContentCard">
+                    <h4 class="ContentCardTitle">Design Page</h4>
+                    <p class="ContentCardDescription">A page illustrating my web development process.</p>
+                </div>
+                </a>
+              <a class="CMLink" href="../Portfolio/Portfolio.html"> 
+                <div class="ContentCard">
+                    <h4 class="ContentCardTitle">Portfolio Page</h4>
+                    <p class="ContentCardDescription">A page dedicated to showcasing the things I make.</p>
+                </div>
+                </a>
 
-    <div class="PdfViewerContainer">
-       
-        <div class="PdfToolbar">
-            <button id="PdfPrevPage">← Previous</button>
-            <span id="PdfPageNum">1</span> / <span id="PdfPageCount">0</span>
-            <button id="PdfNextPage">Next →</button>
+                
+            </div>
+        </article>
+
+        <section class="UserFlowSection">
+            <h3 class="SectionTitle">User Flow</h3>
+            <div class="FlowDiagram">
+              
+            </div>
+        </section>
+
+        <section class="InspirationSection">
+            <h3 class="SectionTitle">Design Inspiration</h3>
+            <ul class="ReferenceList">
+                <li class="ReferenceItem"><a href="https://www.gucci.com/za/en_gb/" class="ReferenceLink">Gucci (UI/UX and layout) inspiration</a> </li>
+                <li class="ReferenceItem"><a href="https://www.hermes.com/us/en/" class="ReferenceLink">Hermes(further UI/UX and layout) inspo</a></li> 
+                <li class="ReferenceItem"><a href="https://joshua-jandrell.github.io/JJ_Website/index.html#home" class="ReferenceLink">Joshua’s Portfolio (Navigation, UI, UX, Home)</a></li> 
+                <li class="ReferenceItem"><a href="https://loonars.com/project/venus/" class="ReferenceLink"> Venus project(aesthetic and design elements) </a></li> 
+                <li class="ReferenceItem"><a href="https://www.theshipwrecksurvey.com/" class="ReferenceLink"> The Shipwreck(aesthetic and layout) </a></li> 
+                <li class="ReferenceItem"><a href="https://minhpham.design/" class="ReferenceLink">Minh Pham(aesthetic, UXand layout)</a></li> 
+                <li class="ReferenceItem"><a href="https://www.pistola.in/" class="ReferenceLink">Pistola (aesthetic)</a></li> 
+                <li class="ReferenceItem"><a href="https://www.alexandermcqueen.com/" class="ReferenceLink">Alexander McQueen (aesthetic and layout)</a></li>
+                <li class="ReferenceItem"><a href="https://200.allens.com.au/" class="ReferenceLink"> 200 Allens (Similar to how i want my site to be)</a></li> 
+            </ul>
+        </section>
+
+        <section class="StyleGuideSection">
+            <h3 class="SectionTitle">Style Guide</h3>
+            <figure class="StyleGuideFigure">
+                <img src="../Images/StyleGuide.jpg" alt="Website style guide showing typography, color palette and UI components" class="StyleGuideImage">
+                <figcaption class="StyleGuideCaption">A collection of design elements that define the visual identity of the website</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="Footer">
+        <div class="FooterContent">
+            <p class="FooterText">
+                &copy; 2025 Tlhalefo Boshielo (EVO) · All rights reserved.
+                This site and its contents are part of a creative portfolio. Unauthorized reproduction or distribution is prohibited.
+            </p>
+            <div class="SocialLinks">
+                <a href="https://www.instagram.com/ev0.jpeg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="SocialLink">
+                    <img src="../Images/InstagramLogo.png" alt="Instagram" class="SocialIcon">
+                </a>
+            </div>
         </div>
-
-         <canvas id="PdfCanvas"></canvas>
-    </div>
-    
-       <h3> My Goal</h3>
-<p class= “ParagraphContainer” >My Primary goal for my Website is to Showcase my <b>Work</b> and design processes (specifically in the case of the website, however it does give further insight into my creative process at large). My aim is for this site to be a place to display my academic, creative, and design work in a visually engaging and cohesive manner that aligns with me as an artist and how I'd like my work to be portrayed in a digital space . <br>
-By merging ancient Egyptian motifs with a futuristic sci-fi aesthetic,  my goal is to showcase myself as a unique designer whose work stands apart from conventional portfolios in an Indigenous African aesthetic,
-that mirrors myself as an African Artist. <br> 
-I want to encourage users to discover my content naturally in an organic and cohesive manner that makes navigating through my site as intuitive as possible, to encourage users to stay on my site and continue to browse through, conveying a sense of exploration through my work. <br>
-I want users to feel as though they are exploring an ancient tomb/pyramid filled with mystique and wonder. Whether the user is looking to employ, collaborate, or simply explore my portfolio, the goal for the site is that it enables them to interact meaningfully with my work and easily get in touch.
-</p>
-
-
-<h4>Content Mapping</h4>
-<p class= “ParagraphContainer” >Homepage - A brief Introduction and featured works presented as artifacts awaiting discovery.
-Blogs Page –  Weekly blogs and reflections of my web development process.
-Web Design Page –  Showcases the evolution of the website,  showcasing my design decisions, processes and experiments as architectural “blueprints”.
-Portfolio Page –   Showcasing my art, animations, photography etc with the UI displayed like hieroglyphs.
-Essays Page –  A collection of essays, carved into the digital stone (still brainstorming)
- Profile –  Contact information, Social media , and a biography with a picture of me , presented/displayed  as a Pharaoh in a Sarcophagus 
-Users
-Potential Employers, Collaborators, and Recruiters- People seeking my talent
-People with a passion for art and design
-General Users- Users intrigued by immersive and unconventional web experiences.
-</p>
-
-
-<h3>User Flow</h3>
-<h4>Homepage</h4>
-
-
-<p>Brief introduction and website's purpose, with my logo shrinking into tha Navbar like in the Gucci website <a href="https://www.gucci.com/za/en_gb/">Gucci</a> , with a collapsable menu in the navbar that features the navigation elements and links to every part of my site
-A slider that you can scroll through featuring my latest and best projects/works presented as relics.
-A Panel that has an illustration that serves as a link that takes you to the corresponding part of my website </p>
-
-<h4>My Profile</h4>
-<p> Will be featured at the bottom of my homepage and each link to it will just take users straight there, 
-    there will also be an option to go to my profilr on the navbar at all times</p>
-
-<h4>Portfolio Page</h4>
-
-<p>Clickable glyphs that expand like revealing hidden chambers(All the pages comprising of the different work i do).</p>
-
-<h3>Blogs Page</h3>
-
-
-<p>Entries listed as scrolls in a library.
-Side navigation as a bookshelf allowing selection of preferred scrolls.
-each blog will have a “read more”  with more information and a "Unroll Scroll" button.</p>
-<h3>Essays Page</h3>
-
-
-<p>Essays listed as stone carved inscriptions on a wall.
-"Read Inscription" button representing “Read more”.</p>
-<h3>Web Design Page</h3>
-
-
-<p>Design process detailed as evolving architectural blueprints.</p>
-
-<h3>Profile</h3>
-<p>Self-portrait styled as an ancient sarcophagus.
-Biography and Contact information presented on a carved tablet.</p>
-
-<h3>Design Inspiration (Reference Material)</h3>
-
- <p><a class="RefLinks" href="https://www.gucci.com/za/en_gb/">Gucci(UI/UX and layout) inspo</a>  - The Gucci Website for me is quite admirable for its UI/UX design. It has transitional effects such as the Gucci Logo shrinking into the navbar as you scroll down the homepage, coupled with a clean layout and presentation of data, using hover effects and straying from an information overload. These elements provide an organed yet polished experience that i wish to achieve with my site. <br>
-
- <a class="RefLinks" href="https://www.hermes.com/us/en/">Hermes(further UI/UX and layout) inspo</a> - The Hemes Website is quite similar to the gucci one, however it features less stylistic elements. However the few they do employ are polished to achieve a sense of luxury and quality as you browse through the site, using some elements present on the gucci site in a more polished manner, or rather, in a manner that would better work with my site. <br>
- <a class="RefLinks" href="https://joshua-jandrell.github.io/JJ_Website/index.html#home">Joshua’s Portfolio (Navigation, UI, UX, Home)</a> - Out of all past student work this one stood out to me the most. Im inspired by how the Homepage (and some of the others) “evovles” as you scroll through with transitional effects and UI elements that make navigating through Joshuas portfolio feel intuitive, engaging and organic. Which is essentially how id like browsing through my website to feel <br>
- <a class="RefLinks" href="https://loonars.com/project/venus/"> Venus project </a>(aesthetic and design elements) <br>
- <a class="RefLinks" href="https://www.theshipwrecksurvey.com/"> The Shipwreck </a>(aesthetic and layout) <br>
- <a class="RefLinks" href="https://minhpham.design/">Minh Pham</a> (aesthetic, UX and layout) <br>
- <a class="RefLinks" href="https://www.pistola.in/">Pistola</a> (aesthetic) <br>
- <a class="RefLinks" href="https://200.allens.com.au/"> 200 Allens</a>(Similar to how i want the experience of my site to be)
- <p>The thematic nature of the above listed websites and how the overall webdesign and elements are shaped around an experience the web designers want to covey, 
-  using unique animations, UI elements such as a custom cursor, and just how the information is presented has given me a lot of inspiration in how id like to style my website around the
-   intended experience id like for the user to experience in exploring my work and myself as an artist.</p>
-
- 
-
-
-<h3>Style Guide </h3>
-<img src="../Images/StyleGuide.jpg" alt="A collection of design elements, including typography, color palette, and UI components, that define the visual identity of the website." width="500px" height="500px">
-<p>A collection of design elements, including typography, color palette, and UI components, that define the visual identity of the website.</p>
-
-<h4>Visual Aesthetic</h4> 
-<p>A fusion of ancient African and futuristic elements, creating a unique and immersive design that draws users into a narrative journey.</p>
-
-
-
-</ul>
-
-<footer class="FooterContainer">
-  <div class="FooterContent">
-    <p class="FooterText">
-      &copy; 2025 Tlhalefo Boshielo (EVO) · All rights reserved.
-      This site and its contents are part of a creative portfolio. Unauthorized reproduction or distribution is prohibited.
-    </p>
-    <div class="SocialMediaIcons">
-      <a href="https://www.instagram.com/ev0.jpeg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="SocialLink">
-        <img id="IGIcon" src="../Images/InstagramLogo.png" alt="Instagram">
-      </a>
-    </div>
-  </div>
-</footer>
-  
+    </footer>
 </body>
-</html>
+</h
